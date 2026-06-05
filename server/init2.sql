@@ -34,21 +34,14 @@ CREATE TABLE reservations (
 
 INSERT INTO cars (car_key, name, registration, admin_only)
 VALUES
-('audi-a4', 'Audi A4', 'SG RO-001', TRUE),
-('audi-a6', 'Audi A6', 'SG RO-002', TRUE),
-('bmw-320d', 'BMW 320d', 'SG RO-003', TRUE),
-('bmw-520d', 'BMW 520d', 'SG RO-004', TRUE),
-('mercedes-c220', 'Mercedes C220', 'SG RO-005', FALSE),
-('skoda-superb', 'Škoda Superb', 'SG RO-006', FALSE),
-('skoda-octavia', 'Škoda Octavia', 'SG RO-007', FALSE),
-('vw-passat', 'Volkswagen Passat', 'SG RO-008', FALSE),
-('toyota-corolla', 'Toyota Corolla', 'SG RO-009', FALSE),
-('hyundai-i30', 'Hyundai i30', 'SG RO-010', FALSE);
+('ford-tourneo-15', 'Ford Tourneo 1.5', 'SG JF-219', FALSE),
+('ford-transit-keosn', 'Ford Transit KEOSN', 'SG JF-067', FALSE),
+('mercedes-sprinter-delavnica', 'Mercedes Sprinter Delavnica', 'SG SU-599', FALSE),
+('citroen-berlingo', 'Citroen Berlingo', 'SG IF-364', FALSE),
+('tovorna-prikolica', 'Tovorna Prikolica', 'SG LC-718', FALSE),
+('ford-transit-veliki-siv', 'Ford Transit Veliki Siv', 'SG AC-955', FALSE),
+('ford-transit-custom-sedezi', 'Ford Transit Custom Sedeži', 'SG FH-961', FALSE);
 
-INSERT INTO reservations (car_id, user_email, user_name, reserved_by_email, reserved_by_name, start_time, end_time)
-VALUES
-(6, 'stas.javornik@robeta.si', 'Staš Javornik', 'stas.javornik@robeta.si', 'Staš Javornik', '2026-06-03 09:00:00', '2026-06-03 11:00:00'),
-(8, 'jan.novak@robeta.si', 'Jan Novak', 'jan.novak@robeta.si', 'Jan Novak', '2026-06-03 12:00:00', '2026-06-03 14:00:00');
 
 SELECT * FROM reservations;
 SELECT * FROM cars;

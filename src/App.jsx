@@ -51,7 +51,10 @@ msalReady.then(async () => {
           lastName: parts.slice(1).join(" ") || "",
           email,
           password: "",
-          isAdmin: email === "stas.javornik@robeta.si",
+          isAdmin: [
+          "stas.javornik@robeta.si",
+          "matjaz@robeta.si"
+          ].includes(email),
           loginType: "microsoft365",
         };
       }
@@ -741,7 +744,10 @@ function confirmDeleteReservation() {
       lastName,
       email,
       password,
-      isAdmin: email === "stas.javornik@robeta.si",
+      isAdmin: [
+    "stas.javornik@robeta.si",
+    "matjaz@robeta.si",
+    ].includes(email),
       loginType: isRobetaEmail(email) ? "microsoft365" : "local",
     };
 
@@ -801,7 +807,10 @@ function confirmDeleteReservation() {
         lastName: nameParts.slice(1).join(" ") || namesFromEmail.lastName,
         email,
         password: "",
-        isAdmin: email === "stas.javornik@robeta.si",
+        isAdmin: [
+        "stas.javornik@robeta.si",
+        "matjaz@robeta.si",
+        ].includes(email),
         loginType: "microsoft365",
       };
 
@@ -1228,9 +1237,7 @@ function confirmDeleteReservation() {
                 )}
               </div>
 
-              <small className="field-note">
-                Vozila z oznako 🔒 so vidna v sistemu in na koledarju, rezervira pa jih lahko samo administrator.
-              </small>
+
             </div>
 
             <DateTimePickerPanel

@@ -10,7 +10,7 @@ app.use(express.json());
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "ROBETA_2026!", // tukaj vpiši svoje MySQL root geslo, če še ni pravilno
+  password: "ROBETA_2026!",
   database: "robeta_rezervacije",
 });
 
