@@ -202,9 +202,20 @@ function getCalendarDays(monthDate) {
 }
 
 function changeCalendarMonth(dateValue, amount) {
-  const date = new Date(`${dateValue}T12:00`);
+  let date;
+
+  if (dateValue instanceof Date) {
+    date = new Date(dateValue.getFullYear(), dateValue.getMonth(), 1, 12);
+  } else {
+    date = new Date(`${dateValue}T12:00`);
+  }
+
+  if (Number.isNaN(date.getTime())) {
+    date = new Date();
+  }
+
   date.setMonth(date.getMonth() + amount);
-  return date;
+  return new Date(date.getFullYear(), date.getMonth(), 1, 12);
 }
 
 
